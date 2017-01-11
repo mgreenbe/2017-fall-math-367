@@ -1,0 +1,80 @@
+\documentclass{amsart}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bzero}{\mathbf{0}}
+\renewcommand{\bf}{\mathbf{f}}
+
+\begin{document}
+\title{Vector-valued functions of a vector variable}
+\maketitle
+
+\begin{itemize}
+\setlength\itemsep{1em}
+\item Let $X$ and $Y$ be sets. A function
+\[
+  f:X\lra Y
+\]
+is a rule that associates a value $f(x)\in Y$ to every element $x\in X$.
+
+\item Single variable calculus:
+\[
+ f:X\lra \RR,\quad\text{where}\quad
+ X\subseteq\RR. 
+\]
+Typically, $X$ is an interval or a union of such.
+
+\item Multivariable calculus:
+\[
+  \bf:X\lra \RR^m,\quad\text{where}\quad
+X\subseteq \RR^n.
+\]
+Here,
+\[
+  \RR^n:=\{\bx=(x_1,\ldots,x_n) : x_1,\ldots,x_n\in\RR\}.
+  \]
+
+\item $\bf$ itself can be viewed as a vector:
+\[
+  f(\bx) = (f_1(\bx),\ldots,f_m(\bx)),
+\]
+where
+\[
+  f_i(\bx):=\text{$i$-th component of $f(\bx)$},\quad
+  1\leq i\leq m.
+  \]
+Note that $f_i$ is a real-valued (scalar-valued)
+function of the vector variable $\bx\in\RR^n$.
+\[
+  f_i:\RR^n\lra\RR.
+  \]
+We call $f_i$ the $i$-th component function of $\bf$ and we write
+\[
+\bf=(f_1,\ldots,f_m).
+\]
+
+\item Scalar-valued functions of a vector variable:
+
+\bigskip
+\begin{enumerate}
+\setlength{\itemsep}{1em}
+\item Define $f:\RR^2\lra \RR,\quad f(\bx) := x_1-x_2$.
+\item Define $f:\RR^2\lra \RR,\quad f(x,y) := e^{-\pi(x^2+y^2)}$.
+\item Define $f:\RR^n\setminus\{\bzero\}\lra \RR,\quad f(\bx) := \dfrac1{\|\bx\|^2}$.
+($X\setminus Y:= \{x\in X : x\notin Y\}$)
+\end{enumerate}
+
+\item Natural domains: If $\bf$ is defined via formula without explicit reference to a domain
+$X\subseteq \RR^n$, we take $X$ --- the natural domain of $\bf$ --- to be the largest subset
+of $\RR^n$ on which the formula defining $\bf$ makes sense.
+
+\bigskip
+\begin{enumerate}
+\setlength{\itemsep}{1em}
+\item $g(t) = \left(\dfrac1{t^2-1},\dfrac1{t^3-1}\right)$, $X=\RR\setminus\{-1, 1\}$.
+\item $f(x,y)=\log(y-x)$, $X=\{(x,y)\in\RR^2 : y>x\}$.
+\item $\theta(x,y,z)=\cos^{-1}\left(\dfrac{z}{\sqrt{x^2+y^2+z^2}}\right)$, $X=\RR^3\setminus\{(0,0,0)\}$.
+\end{enumerate}
+\end{itemize}
+\end{document}
